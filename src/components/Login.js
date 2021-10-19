@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { setAuthedUser } from '../actions/authedUser';
 
+import Card from 'react-bootstrap/Card';
+
 const Login = props => {
   
   const handleAuthedUser = id => {
@@ -17,16 +19,22 @@ const Login = props => {
   console.log("props in login:", props)
 
   return (
-    <div>
-      <h2>Welcome to</h2>
-      <h3>Would You Rather</h3>
-      <h4>Select User</h4>
-      {userIds.map(user => (
-        <button key={user} onClick={() => handleAuthedUser(user)}>
-          {users[user].name}
-        </button>
-      ))}
-    </div>
+    <Card className="cardStyle">
+      <Card.Header>
+        <h2>Welcome to <b>Would You Rather</b> App!</h2>
+        <h4>Please sign in to continue</h4>
+      </Card.Header>
+      <Card.Body>
+        <div className="RRlogo" />
+        <h4>Select User</h4>
+        {userIds.map(user => (
+          <button key={user} onClick={() => handleAuthedUser(user)}>
+            {users[user].name}
+          </button>
+        ))}
+      </Card.Body>
+      
+    </Card>
   );
 
 }
