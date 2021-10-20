@@ -28,3 +28,6 @@
   right: 0;
   margin: auto;
 }
+.navbar-nav .nav-item{
+  width: 200px;
+}
