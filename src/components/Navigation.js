@@ -1,19 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 const Navigation = () => {
   return (
-    <ul className="navbar">
-      <li>
-        <NavLink to="/questions">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/add">New Poll</NavLink>
-      </li>
-      <li>
+    <Navbar bg="light" expand="lg">
+      <Nav>
+        <Nav.Item>
+          <NavLink to="/questions">Home</NavLink>
+        </Nav.Item>
+        <Nav.Item>
+          <NavLink to="/add">New Question</NavLink>
+        </Nav.Item>
+        <Nav.Item>
         <NavLink to="/leaderboard">Leaderboard</NavLink>
-      </li>
-    </ul>
+        </Nav.Item>
+      </Nav>
+    </Navbar>
   );
 };
 
