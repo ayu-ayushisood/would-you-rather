@@ -12,9 +12,11 @@ const Header = (props) => {
   };
 
     const { authedUser, users } = props;
+    console.log("users", users)
     return (
-      <div>
-        <h1>Hey {users[authedUser].name}!</h1>
+      <div className="header">
+        <h3>Hello, {users[authedUser].name}!</h3>
+        <img src={users[authedUser].avatarURL} alt="Logged in user" className="profile-pic"/>
         <button>
           <a onClick={handleLogout}>Logout</a>
         </button>
